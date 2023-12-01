@@ -19,11 +19,14 @@ import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import javax.swing.Action;
 import java.awt.event.ActionListener;
+import javax.swing.JProgressBar;
 
 public class UndirlaFlota {
 
 	private JFrame frame;
 	private final Action action = new SwingAction();
+	UnovsUno uno= new UnovsUno();
+	Multijugador multi = new Multijugador();
 
 	/**
 	 * Launch the application.
@@ -70,17 +73,17 @@ public class UndirlaFlota {
 		JButton btnNewButton_1 = new JButton("Dos jugadores");
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+			groupLayout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(122)
+					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 216, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(366, Short.MAX_VALUE))
+				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(54)
 					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 105, GroupLayout.PREFERRED_SIZE)
 					.addGap(66)
 					.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE)
 					.addGap(356))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(122)
-					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 216, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(366, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -91,7 +94,7 @@ public class UndirlaFlota {
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
 						.addComponent(btnNewButton, GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
-					.addContainerGap(125, Short.MAX_VALUE))
+					.addGap(125))
 		);
 		frame.getContentPane().setLayout(groupLayout);
 	}
